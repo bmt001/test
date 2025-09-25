@@ -1,11 +1,11 @@
 #!/usr/bin/env bash  
   
-# Copyright (c) 2021-2024 tteck  
+# Copyright (c) 2021-2025 community-scripts ORG  
 # Author: [your-name]  
-# License: MIT  
-# https://github.com/tteck/Proxmox/raw/main/LICENSE  
+# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE  
+# Source: https://github.com/DialmasterOrg/Youtarr  
   
-source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"  
+source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"  
 color  
 verb_ip6  
 catch_errors  
@@ -14,15 +14,16 @@ network_check
 update_os  
   
 msg_info "Installing Dependencies"  
-$STD apt-get install -y curl  
-$STD apt-get install -y sudo  
-$STD apt-get install -y mc  
-$STD apt-get install -y git  
-$STD apt-get install -y ca-certificates  
-$STD apt-get install -y gnupg  
-$STD apt-get install -y python3  
-$STD apt-get install -y python3-pip  
-$STD apt-get install -y ffmpeg  
+$STD apt-get install -y \  
+  curl \  
+  sudo \  
+  mc \  
+  git \  
+  ca-certificates \  
+  gnupg \  
+  python3 \  
+  python3-pip \  
+  ffmpeg  
 msg_ok "Installed Dependencies"  
   
 msg_info "Setting up Node.js Repository"  
